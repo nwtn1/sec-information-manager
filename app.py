@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 
-from resources.tools import InfoManager
+from resources.info_manager import InfoManager
 from resources.interface import Interface
 
 app = Flask(__name__)
