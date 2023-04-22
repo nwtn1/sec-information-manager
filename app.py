@@ -8,7 +8,7 @@ app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(InfoManager, "/receive/<target_name>")
-api.add_resource(InfoManager, "/show")
+api.add_resource(Interface, "/show")
 
 
 if __name__ == '__main__':
