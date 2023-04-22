@@ -3,7 +3,7 @@ from json import dumps, loads
 
 class FileManager():
 
-  def __init__(self, data_origin, data_to_write):
+  def __init__(self, data_origin = "", data_to_write = ""):
     self.data_origin = data_origin
     self.data_to_write = data_to_write
     self.current_data_in_file = []
