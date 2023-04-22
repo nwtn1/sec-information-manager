@@ -1,13 +1,14 @@
 from flask import Flask
-from flask_restful import Api, request, Resource
+from flask_restful import Api
 
+from resources.tools import InfoManager
+from resources.interface import Interface
 
 app = Flask(__name__)
 api = Api(app)
 
-@app.before_request
-def before_request():
-  return ""
+api.add_resource(InfoManager, "/receive/<target_name>")
+api.add_resource(InfoManager, "/show")
 
 
 if __name__ == '__main__':
