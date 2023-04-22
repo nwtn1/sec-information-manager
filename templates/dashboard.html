@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
   <body>
-    <h1>{{data_list}}</h1>
+    <div class="top_bar">XSS MANAGER</div>
+    <div class="scroll_box">
+      {%for data in data_list %}
+      <div class="row">
+        <div>{{ data.as_json()["id"] }}</div>
+        <div>{{ data.as_json()["token"] }}</div>
+        <div>{{ data.as_json()["savedAt"] }}</div>
+      </div>
+      {%endfor%}
+    </div>
   </body>
 </html>

@@ -1,0 +1,33 @@
+body{
+  margin: 0;
+  padding: 20px;
+  background-color: #0D1117;
+  color: #d2dae2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top_bar{
+  height: 70px;
+  margin-bottom: 20px;
+  width: auto;
+  border-radius: 8px;
+  border: 1px solid #9980FA;
+  background-color: #161B22;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+
+}
+
+.scroll_box{
+  width: auto;
+  height: calc(100vh - 140px);
+  border: 1px solid #9980FA;
+  border-radius: 8px;
+}
+
+.row{
+  
+}
