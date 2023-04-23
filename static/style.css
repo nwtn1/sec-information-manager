@@ -23,8 +23,9 @@ body{
 
 .scroll_box{
   display: grid;
-  grid-template-columns: 50% 50%;
-
+  grid-template-columns: repeat(2, 50%);
+	grid-template-rows: 1fr 1fr 1fr;
+  justify-items: stretch;
   width: 100%;
   border-radius: 8px;
 
