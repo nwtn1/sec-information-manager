@@ -6,12 +6,18 @@
   </head>
   <body>
     <div class="top_bar">XSS MANAGER</div>
+    <div class="buttons">
+      <button>Clear all</button>
+    </div>
     <div class="scroll_box">
       {%for data in data_list %}
       <div class="row">
-        <div>{{ data.as_json()["id"] }}</div>
-        <div>{{ data.as_json()["token"] }}</div>
-        <div>{{ data.as_json()["savedAt"] }}</div>
+        <div class="number">{{ data["id"] }}</div>
+        <div class="data">
+          <div>Target: {{ data["target"] }}</div>
+          <div>{{ data["token"] }}</div>
+          <div>Time: {{ data["savedAt"] }}</div>
+        </div>
       </div>
       {%endfor%}
     </div>

@@ -22,7 +22,7 @@ class DatabaseModel(db.Model):
     }
   
   @classmethod
-  def find_all(self):
+  def find_all(self):    
     return self.query.all()
   
   def save(self):
