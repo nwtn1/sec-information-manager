@@ -2,12 +2,24 @@
 <html>
   <head>
     <title>Dashboard</title>
+    <meta http-equiv="refresh" content="30">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+      const clear_loggs = () =>{
+        const Http = new XMLHttpRequest();
+        const url='http://localhost:5000/clear-session';
+        Http.open("DELETE", url);
+        Http.send();
+
+        location.reload();
+      }
+    </script>
   </head>
   <body>
     <div class="top_bar">XSS MANAGER</div>
     <div class="buttons">
-      <button>Clear all</button>
+      <p>Auto refresh set to 30s</p>
+      <button onclick="clear_loggs()">Clear loggs</button>
     </div>
     <div class="scroll_box">
       {%for data in data_list %}

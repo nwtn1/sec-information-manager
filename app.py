@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_restful import Api
 
 from resources.info_manager import InfoManager
-from resources.interface import Interface
+from resources.interface import Interface, ClearSession
 
 from sql_alchemy import db
 
@@ -18,6 +18,7 @@ def create_db():
 db.init_app(app)
 
 api.add_resource(InfoManager, "/receive/<target_name>")
+api.add_resource(ClearSession, "/clear-session")
 api.add_resource(Interface, "/show/<secret_key>")
 
 

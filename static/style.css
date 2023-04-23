@@ -30,13 +30,23 @@ body{
   border-radius: 8px;
 
   overflow-y: auto;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 210px);
 }
 
+button{
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #9980FA;
+  cursor: pointer;
+}
 .buttons {
   display: flex;
   justify-content: right;
-  margin: 20px;
+  align-items: center;
+  margin: 15px;
+  gap: 10px;
 }
 .row{
   margin: 20px 50px 20px 50px;

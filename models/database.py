@@ -25,6 +25,11 @@ class DatabaseModel(db.Model):
   def find_all(self):    
     return self.query.all()
   
+  def delete():
+    db.drop_all()
+    db.create_all()
+    db.session.commit()
+
   def save(self):
     db.session.add(self)
     db.session.commit()
